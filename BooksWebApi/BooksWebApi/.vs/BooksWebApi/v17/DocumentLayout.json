@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\one\\bookswebapi\\bookswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\one\\bookswebapi\\bookswebapi\\controllers\\booksapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:controllers\\booksapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\one\\bookswebapi\\bookswebapi\\dtos\\bookdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:dtos\\bookdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\one\\bookswebapi\\bookswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookData.cs",
+              "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Dtos\\BookData.cs",
+              "RelativeDocumentMoniker": "Dtos\\BookData.cs",
+              "ToolTip": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Dtos\\BookData.cs",
+              "RelativeToolTip": "Dtos\\BookData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T21:13:07.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T20:31:54.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-15T20:31:51.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BooksApi.cs",
+              "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Controllers\\BooksApi.cs",
+              "RelativeDocumentMoniker": "Controllers\\BooksApi.cs",
+              "ToolTip": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\One\\BooksWebApi\\BooksWebApi\\Controllers\\BooksApi.cs",
+              "RelativeToolTip": "Controllers\\BooksApi.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAcwHcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T12:28:00.604Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
