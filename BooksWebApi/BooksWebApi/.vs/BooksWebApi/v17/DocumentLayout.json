@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\\u05DE\u05D1\u05D7\u05DF\\one\\booksmangment\\bookswebapi\\bookswebapi\\bookswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:bookswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\\u05DE\u05D1\u05D7\u05DF\\one\\booksmangment\\bookswebapi\\bookswebapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\\u05DE\u05D1\u05D7\u05DF\\one\\booksmangment\\bookswebapi\\bookswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -20,10 +28,6 @@
       "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:controllers\\booksapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\\u05DE\u05D1\u05D7\u05DF\\one\\booksmangment\\bookswebapi\\bookswebapi\\bookswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:bookswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|c:\\users\\\u05D3\u05D5\u05D3\\desktop\\\u05DE\u05D1\u05D7\u05DF\\one\\booksmangment\\bookswebapi\\bookswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{599EAE0F-4B1F-4C58-A03E-F58FE58E14A0}|BooksWebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -35,11 +39,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAHIBAAAAAAAAAAAAwI0BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-18T14:00:44.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BookDbContext.cs",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BL\\DAL\\BookDbContext.cs",
               "RelativeDocumentMoniker": "..\\BL\\DAL\\BookDbContext.cs",
@@ -52,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IBookBl.cs",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BL\\interfaces\\IBookBl.cs",
               "RelativeDocumentMoniker": "..\\BL\\interfaces\\IBookBl.cs",
@@ -65,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "BooksWebApi",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\BooksWebApi.csproj",
               "RelativeDocumentMoniker": "BooksWebApi.csproj",
@@ -78,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BookBl.cs",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BL\\BookBl.cs",
               "RelativeDocumentMoniker": "..\\BL\\BookBl.cs",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BooksApi.cs",
               "DocumentMoniker": "C:\\Users\\\u05D3\u05D5\u05D3\\Desktop\\\u05DE\u05D1\u05D7\u05DF\\One\\BooksMangment\\BooksWebApi\\BooksWebApi\\Controllers\\BooksApi.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksApi.cs",
