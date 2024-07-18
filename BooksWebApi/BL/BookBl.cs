@@ -1,11 +1,10 @@
-﻿using BooksWebApi.DAL;
+﻿using BL.interfaces;
+using BooksWebApi.DAL;
 using BooksWebApi.Dtos;
-using BooksWebApi.interfaces;
 using BooksWebApi.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
-namespace BooksWebApi.BL
+namespace BL
 {
     public class BookBl : IBookBl
     {

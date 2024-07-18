@@ -1,11 +1,9 @@
-using BooksWebApi.BL;
+using BL;
+using BL.interfaces;
 using BooksWebApi.DAL;
-using BooksWebApi.interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

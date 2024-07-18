@@ -1,7 +1,8 @@
-﻿using BooksWebApi.Dtos;
+﻿
+using BooksWebApi.Dtos;
 using BooksWebApi.Models;
 
-namespace BooksWebApi.interfaces
+namespace BL.interfaces
 {
     public interface IBookBl
     {
