@@ -1,4 +1,4 @@
-﻿namespace BooksWebApi.Models
+﻿namespace BooksManagment.DataObjects
 {
     public class BookAuthor
     {

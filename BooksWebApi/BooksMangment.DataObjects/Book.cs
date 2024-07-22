@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Infrastructure;
-
-namespace BooksWebApi.Models
+﻿namespace BooksManagment.DataObjects
 {
     public class Book
     {      

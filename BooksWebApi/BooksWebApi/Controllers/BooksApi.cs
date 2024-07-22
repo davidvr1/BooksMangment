@@ -1,6 +1,6 @@
-using BL.interfaces;
-using BooksWebApi.Dtos;
-using BooksWebApi.Models;
+using BooksManagment.BL;
+using BooksManagment.DataObjects.Dtos;
+using BooksManagment.DataObjects.interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BooksWebApi.Controllers
@@ -9,11 +9,10 @@ namespace BooksWebApi.Controllers
     [Route("[controller]")]
     public class BooksApi : ControllerBase
     {
-        private readonly IBookBl _bookBl;
-
-        public BooksApi(IBookBl bookBl)
+        private BooksLib _booksLib;
+        public BooksApi(BooksLib bookslib)
         {
-            _bookBl = bookBl;
+            _booksLib = bookslib;
         }
 
         [HttpGet("GetBookByAuthor")]
@@ -21,7 +20,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var books =await _bookBl.GetBooksByAuthor(authorName);
+                var books =await _booksLib.GetBooksByAuthor(authorName);
                 if (books.Count == 0)
                 {
                     return NotFound(new { Message = $"Books with author Name {authorName} have not found." });
@@ -52,7 +51,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var book =await _bookBl.GetBooksById(id);
+                var book =await _booksLib.GetBooksById(id);
 
                 if (book == null)
                 {
@@ -80,7 +79,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var authors =await _bookBl.GetlistOfAuthors();
+                var authors =await _booksLib.GetlistOfAuthors();
                 return Ok(authors.Select(x => new {id=x.Id,Name=x.Name}).ToList());
             }
             catch (Exception ex)
@@ -95,7 +94,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var serieses = await _bookBl.GetlistOfSeries();
+                var serieses = await _booksLib.GetlistOfSeries();
                 return Ok(serieses.Select(x => new { id = x.Id, Name = x.Name }).ToList());
             }
             catch (Exception ex)
@@ -110,7 +109,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var result = await _bookBl.InsertBook(bookData);
+                var result = await _booksLib.InsertBook(bookData);
                 if (result)
                 {
                     return Ok();
@@ -129,7 +128,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                bool succedded = await _bookBl.UpdateBook(bookData);
+                bool succedded = await _booksLib.UpdateBook(bookData);
                 if(succedded)
                 {
                     return Ok(); 
@@ -148,7 +147,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                bool succedded =await _bookBl.DeleteBook(bookTitle);
+                bool succedded =await _booksLib.DeleteBook(bookTitle);
                 if(succedded)
                 {  
                     return Ok(); }

@@ -1,7 +1,7 @@
-﻿using BooksWebApi.Models;
+﻿using BooksManagment.DataObjects;
 using Microsoft.EntityFrameworkCore;
 
-namespace BooksWebApi.DAL
+namespace BooksManagment.DAL.DB
 {
     public class BookDbContext : DbContext
     {
@@ -30,9 +30,8 @@ namespace BooksWebApi.DAL
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Series> Series { get; set; }
-
         public DbSet<BookAuthor> BookAuthors { get; set; }
-        
+
     }
 
 }

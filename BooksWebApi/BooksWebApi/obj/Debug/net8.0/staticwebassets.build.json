@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "TlzKdvAc7+XRQp8wTZ4M2gbDsqB0cBDoVqB+3TK15Qc=",
-  "Source": "BooksWebApi",
-  "BasePath": "_content/BooksWebApi",
+  "Hash": "oxMS9suIHOWr7J/7VyT6csKdPAwS1faVfp+xdT7FKFM=",
+  "Source": "BooksManagment.WebApi",
+  "BasePath": "_content/BooksManagment.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

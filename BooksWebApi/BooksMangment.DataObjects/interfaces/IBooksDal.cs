@@ -1,10 +1,8 @@
-﻿
-using BooksWebApi.Dtos;
-using BooksWebApi.Models;
+﻿using BooksManagment.DataObjects.Dtos;
 
-namespace BL.interfaces
+namespace BooksManagment.DataObjects.interfaces
 {
-    public interface IBookBl
+    public interface IBooksDal
     {
         public Task<List<Book>> GetBooksByAuthor(string authorName);
         public Task<Book> GetBooksById(int id);
