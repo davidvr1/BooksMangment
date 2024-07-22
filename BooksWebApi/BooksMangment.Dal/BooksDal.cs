@@ -10,9 +10,12 @@ namespace BooksManagment.DAL
     public class BooksDal: IBooksDal
     {
         private readonly IServiceScopeFactory _scopeFactory;
-        public BooksDal(IServiceScopeFactory serviceScopeFactory)
+        private readonly BookDbContext _dbContext;
+        public BooksDal(BookDbContext dbContext,IServiceScopeFactory serviceScopeFactory )
         {
+            _dbContext = dbContext;
             _scopeFactory = serviceScopeFactory;
+            
         }
         public async Task<List<Book>> GetBooksByAuthor(string authorName)
         {
