@@ -3,6 +3,7 @@ using BooksManagment.DAL;
 using BooksManagment.DAL.DB;
 using BooksManagment.DataObjects.interfaces;
 using Microsoft.EntityFrameworkCore;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DbContext,BookDbContext>(options =>
+builder.Services.AddDbContext<BookDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
 builder.Services.AddTransient<IBooksDal, BooksDal>();
 builder.Services.AddTransient<BooksService>();
 
@@ -28,7 +30,7 @@ builder.Services.AddCors((option) =>
 });
 
 var app = builder.Build();
-
+app.UseMetricServer();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -37,6 +39,10 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors("all");
 app.UseAuthorization();
+app.UseHttpMetrics(options =>
+{
+    options.AddCustomLabel("host", context => context.Request.Host.Host);
+});
 
 app.MapControllers();
 
