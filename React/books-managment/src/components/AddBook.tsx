@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { IAddBook, Author, Series } from '../types/types';
@@ -15,8 +15,8 @@ const AddBook: React.FC = () => {
   const navigate = useNavigate();
 
   // Fetch the list of authors
-  const { data: authors, isLoading: isLoadingAuthors, error: authorsError } = useFetch<Author[]>('http://localhost:5042/BooksApi/GetListOfAuthors');
-  const { data: serieses, isLoading: isLoadingSerieses, error: seriesesError } = useFetch<Series[]>('http://localhost:5042/BooksApi/GetListOfSeries');
+  const { data: authors, isLoading: isLoadingAuthors, error: authorsError } = useFetch<Author[]>('http://localhost:46405/BooksApi/GetListOfAuthors');
+  const { data: serieses, isLoading: isLoadingSerieses, error: seriesesError } = useFetch<Series[]>('http://localhost:46405/BooksApi/GetListOfSeries');
 
   const handleAuthorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     if(e.target.value!=="0"){
@@ -46,7 +46,7 @@ const AddBook: React.FC = () => {
       try {
   
         // Create the book
-        const bookResponse = await axios.post<IAddBook>('http://localhost:5042/BooksApi/InsertBook', {
+        await axios.post<IAddBook>('http://localhost:46405/BooksApi/InsertBook', {
           title,       
           series:seriesName,
           authorName: authorName
@@ -90,7 +90,7 @@ const AddBook: React.FC = () => {
             onChange={(e)=> handleSeriesChange (e)}
             required
           >
-            <option key={0} value={"0"} selected>Select Series</option>
+            <option key={0} value={"0"} defaultValue='true'>Select Series</option>
             {serieses?.map(author => (
               <option key={author.id} value={author.name}>
                 {author.name}
@@ -108,7 +108,7 @@ const AddBook: React.FC = () => {
             onChange={handleAuthorChange}
             required
           >
-            <option key={0} value={"0"} selected>Add Author</option>
+            <option key={0} value={"0"} defaultValue='true'>Add Author</option>
             {authors?.map(author => (
               <option key={author.id} value={author.name}>
                 {author.name}

@@ -10,7 +10,7 @@ const useBookOperations = () => {
     setIsLoading(true);
     setError(null);
     try {
-     await axios.delete(`http://localhost:5042/BooksApi/DeleteBook`,{
+     await axios.delete(`http://localhost:46405/BooksApi/DeleteBook`,{
         headers: {
           'Content-Type': 'application/json',          
         },
@@ -29,7 +29,7 @@ const useBookOperations = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await axios.put(`http://localhost:5042/BooksApi/UpdateBook`, book);  
+      const response = await axios.put(`http://localhost:46405/BooksApi/UpdateBook`, book);  
       return response.data;
     } catch (err) {
       setError('An error occurred while updating the book.');

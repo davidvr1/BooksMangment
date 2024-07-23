@@ -9,7 +9,7 @@ const BookSearch: React.FC = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    fetchData(`http://localhost:5042/BooksApi/GetBookByAuthor?authorName=${authorName}`);
+    fetchData(`http://localhost:46405/BooksApi/GetBookByAuthor?authorName=${authorName}`);
   };
 
   return (

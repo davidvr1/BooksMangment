@@ -7,7 +7,7 @@ import UpdateBook from './UpdateBook';
 
 const BookDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { data: book, isLoading, error, fetchData } = useFetch<Book>(`http://localhost:5042/BooksApi/GetBookById?id=${id}`);
+  const { data: book, isLoading, error, fetchData } = useFetch<Book>(`http://localhost:46405/BooksApi/GetBookById?id=${id}`);
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
 
