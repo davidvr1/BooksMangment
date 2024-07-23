@@ -19,7 +19,7 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 });
 
 builder.Services.AddTransient<IBooksDal, BooksDal>();
-builder.Services.AddTransient<BooksService>();
+builder.Services.AddTransient<IBooksService, BooksService>();
 
 builder.Services.AddCors((option) =>
 {

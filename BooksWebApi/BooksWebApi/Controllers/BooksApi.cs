@@ -9,10 +9,10 @@ namespace BooksWebApi.Controllers
     [Route("[controller]")]
     public class BooksApi : ControllerBase
     {
-        private BooksService _booksLib;
-        public BooksApi(BooksService bookslib)
+        private IBooksService _bookService;
+        public BooksApi(IBooksService booksService)
         {
-            _booksLib = bookslib;
+            _bookService = booksService;
         }
 
         [HttpGet("GetBookByAuthor")]
@@ -20,7 +20,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var books =await _booksLib.GetBooksByAuthor(authorName);
+                var books = await _bookService.GetBooksByAuthor(authorName);
                 if (books.Count == 0)
                 {
                     return NotFound(new { Message = $"Books with author Name {authorName} have not found." });
@@ -51,7 +51,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var book =await _booksLib.GetBooksById(id);
+                var book = await _bookService.GetBooksById(id);
 
                 if (book == null)
                 {
@@ -79,8 +79,8 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var authors =await _booksLib.GetlistOfAuthors();
-                return Ok(authors.Select(x => new {id=x.Id,Name=x.Name}).ToList());
+                var authors = await _bookService.GetlistOfAuthors();
+                return Ok(authors.Select(x => new { id = x.Id, Name = x.Name }).ToList());
             }
             catch (Exception ex)
             {
@@ -94,7 +94,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var serieses = await _booksLib.GetlistOfSeries();
+                var serieses = await _bookService.GetlistOfSeries();
                 return Ok(serieses.Select(x => new { id = x.Id, Name = x.Name }).ToList());
             }
             catch (Exception ex)
@@ -109,7 +109,7 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                var result = await _booksLib.InsertBook(bookData);
+                var result = await _bookService.InsertBook(bookData);
                 if (result)
                 {
                     return Ok();
@@ -120,7 +120,45 @@ namespace BooksWebApi.Controllers
             {
                 return BadRequest($"{ex.Message}");
             }
-            
+
+        }
+
+        [HttpPost("InsertAuthor")]
+        public async Task<IActionResult> InsertAuthor([FromBody] string authorName)
+        {
+            try
+            {
+                var result = await _bookService.InsertAuthor(authorName);
+                if (result)
+                {
+                    return Ok();
+                }
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+
+        }
+
+        [HttpPost("InsertSeries")]
+        public async Task<IActionResult> InsertSeries([FromBody] string seriesName)
+        {
+            try
+            {
+                var result = await _bookService.InsertSeries(seriesName);
+                if (result)
+                {
+                    return Ok();
+                }
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+
         }
 
         [HttpPut("UpdateBook")]
@@ -128,18 +166,18 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                bool succedded = await _booksLib.UpdateBook(bookData);
-                if(succedded)
+                bool succedded = await _bookService.UpdateBook(bookData);
+                if (succedded)
                 {
-                    return Ok(); 
-                }             
+                    return Ok();
+                }
                 return BadRequest();
             }
             catch (Exception ex)
             {
                 return BadRequest($"{ex.Message}");
             }
-           
+
         }
 
         [HttpDelete("DeleteBook")]
@@ -147,16 +185,17 @@ namespace BooksWebApi.Controllers
         {
             try
             {
-                bool succedded =await _booksLib.DeleteBook(bookTitle);
-                if(succedded)
-                {  
-                    return Ok(); }
+                bool succedded = await _bookService.DeleteBook(bookTitle);
+                if (succedded)
+                {
+                    return Ok();
+                }
                 return BadRequest();
             }
             catch (Exception ex)
             {
                 return BadRequest($"{ex.Message}");
-            }           
+            }
         }
 
 

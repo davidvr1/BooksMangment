@@ -7,18 +7,18 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BooksManagment.DAL
 {
-    public class BooksDal: IBooksDal
+    public class BooksDal : IBooksDal
     {
         private readonly IServiceScopeFactory _scopeFactory;
-        public BooksDal(IServiceScopeFactory serviceScopeFactory )
+        public BooksDal(IServiceScopeFactory serviceScopeFactory)
         {
-            _scopeFactory = serviceScopeFactory;            
+            _scopeFactory = serviceScopeFactory;
         }
         public async Task<List<Book>> GetBooksByAuthor(string authorName)
         {
-            using(var scope = _scopeFactory.CreateScope())
+            using (var scope = _scopeFactory.CreateScope())
             {
-                var _db=scope.ServiceProvider.GetRequiredService<BookDbContext>();
+                var _db = scope.ServiceProvider.GetRequiredService<BookDbContext>();
                 var books = await _db.Books
                 .Include(b => b.Series)
                 .Include(b => b.BookAuthors)
@@ -30,9 +30,9 @@ namespace BooksManagment.DAL
                 .ToListAsync();
 
                 return books;
-            }           
+            }
         }
-        
+
 
         public async Task<Book?> GetBooksById(int id)
         {
@@ -91,31 +91,39 @@ namespace BooksManagment.DAL
             }
         }
 
-        //public async Task<bool> InsertAuthor(string authorName)
-        //{
-        //    var result = GetAuthorAndSeriesFromDb(authorName:authorName);
-        //    if (result.author == null)
-        //    {
-        //       Author newAuthor=new Author() { Name = authorName };
-        //        _db.Authors.Add(newAuthor);
-        //        await _db.SaveChangesAsync();
-        //        return true;
-        //    }
-        //    return false;
-        //}
+        public async Task<bool> InsertAuthor(string authorName)
+        {
+            using (var scope = _scopeFactory.CreateScope())
+            {
+                var _db = scope.ServiceProvider.GetRequiredService<BookDbContext>();
+                var result = GetAuthorAndSeriesFromDb(authorName: authorName);
+                if (result.author == null)
+                {
+                    Author newAuthor = new Author() { Name = authorName };
+                    _db.Authors.Add(newAuthor);
+                    await _db.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+        }
 
-        //public async Task<bool> InsertSeries(string seriesName)
-        //{
-        //    var result = GetAuthorAndSeriesFromDb(seriesName: seriesName);
-        //    if (result.series == null)
-        //    {
-        //        Series newSeries=new Series() { Name=seriesName};
-        //        _db.Series.Add(newSeries);
-        //        await _db.SaveChangesAsync();
-        //        return true;
-        //    }
-        //    return false;
-        //}
+        public async Task<bool> InsertSeries(string seriesName)
+        {
+            using (var scope = _scopeFactory.CreateScope())
+            {
+                var _db = scope.ServiceProvider.GetRequiredService<BookDbContext>();
+                var result = GetAuthorAndSeriesFromDb(seriesName: seriesName);
+                if (result.series == null)
+                {
+                    Series newSeries = new Series() { Name = seriesName };
+                    _db.Series.Add(newSeries);
+                    await _db.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+        }
 
         public async Task<bool> UpdateBook(BookData newBookData)
         {
