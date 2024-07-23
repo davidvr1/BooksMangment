@@ -1,14 +1,13 @@
 ﻿using BooksManagment.DataObjects;
 using BooksManagment.DataObjects.Dtos;
 using BooksManagment.DataObjects.interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace BooksManagment.BL
 {
-    public class BooksLib
+    public class BooksService
     {
         private readonly IBooksDal _booksDal;
-        public BooksLib(IBooksDal booksDal)
+        public BooksService(IBooksDal booksDal)
         {
             _booksDal = booksDal;
         }

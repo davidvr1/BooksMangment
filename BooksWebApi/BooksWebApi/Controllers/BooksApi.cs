@@ -9,8 +9,8 @@ namespace BooksWebApi.Controllers
     [Route("[controller]")]
     public class BooksApi : ControllerBase
     {
-        private BooksLib _booksLib;
-        public BooksApi(BooksLib bookslib)
+        private BooksService _booksLib;
+        public BooksApi(BooksService bookslib)
         {
             _booksLib = bookslib;
         }

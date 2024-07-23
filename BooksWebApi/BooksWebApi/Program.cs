@@ -1,4 +1,7 @@
 using BooksManagment.BL;
+using BooksManagment.DAL;
+using BooksManagment.DAL.DB;
+using BooksManagment.DataObjects.interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,11 +12,12 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DbContext>(options =>
+builder.Services.AddDbContext<DbContext,BookDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-builder.Services.AddTransient<BooksLib>();
+builder.Services.AddTransient<IBooksDal, BooksDal>();
+builder.Services.AddTransient<BooksService>();
 
 builder.Services.AddCors((option) =>
 {
