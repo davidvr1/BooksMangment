@@ -1,11 +1,13 @@
-using BooksManagment.BL;
 using BooksManagment.DataObjects.Dtos;
 using BooksManagment.DataObjects.interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security;
 
 namespace BooksWebApi.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
     public class BooksApi : ControllerBase
     {

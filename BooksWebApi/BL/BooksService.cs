@@ -4,7 +4,7 @@ using BooksManagment.DataObjects.interfaces;
 
 namespace BooksManagment.BL
 {
-    public class BooksService:IBooksService
+    public class BooksService : IBooksService
     {
         private readonly IBooksDal _booksDal;
         public BooksService(IBooksDal booksDal)
@@ -55,13 +55,13 @@ namespace BooksManagment.BL
 
         public async Task<bool> InsertAuthor(string authorName)
         {
-           var success=await _booksDal.InsertAuthor(authorName);
+            var success = await _booksDal.InsertAuthor(authorName);
             return success;
         }
 
         public async Task<bool> InsertSeries(string seriesName)
         {
-            var success=await _booksDal.InsertSeries(seriesName);
+            var success = await _booksDal.InsertSeries(seriesName);
             return success;
         }
     }
