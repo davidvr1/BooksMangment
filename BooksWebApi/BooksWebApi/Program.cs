@@ -2,6 +2,7 @@ using BooksManagment.BL;
 using BooksManagment.DAL;
 using BooksManagment.DAL.DB;
 using BooksManagment.DataObjects.interfaces;
+using Confluent.Kafka;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -47,6 +48,9 @@ builder.Services.AddCors((option) =>
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<DataContext>()
     .AddApiEndpoints();
+builder.Services.Configure<ProducerConfig>(
+    builder.Configuration.GetSection("Kafka")
+    );
 
 var app = builder.Build();
 app.UseMetricServer();

@@ -1,0 +1,12 @@
+for running Kafka server run each in seperate CMD
+D:\Kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+D:\Kafka>.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+To create topic
+D:\Kafka\bin\windows>kafka-topics.bat --create --bootstrap-server localhost:9092 --topic <topic name>
+
+To produce message to topic
+D:\Kafka\bin\windows>kafka-console-producer.bat --broker-list localhost:9092 --topic <topic name>
+
+To consume mesaage from topic
+D:\Kafka\bin\windows>kafka-console-consumer.bat --topic <topic name> --bootstrap-server localhost:9092 --from-beginning
